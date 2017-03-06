@@ -14,10 +14,9 @@ help:
 	@echo "\
 Options:\n\n\
   make all:           make every executable (default)\n\
-  make segfault:      example with a segfault\n\
-  make dynamic:       dynamic arrays with no segfault (doesn't mean no errors!)\n\
-  make static:        static arrays, wrong result\n\
-  make nobugs:        properly working\n\
+  make comparison:       dynamic arrays with no segfault (doesn't mean no errors!)\n\
+  make division:      example with a segfault\n\
+  make square_root:        static arrays, wrong result\n\
   make clean:         delete output files\n\
   make help:          display this help"
 
@@ -27,13 +26,11 @@ executable: $(EXECUTABLES)
 
 all: objects executable
 
-segfault: add_array_segfault.e 
+comparison: comparison.e 
 
-dynamic: add_array_dynamic.e 
+division: division.e 
 
-static: add_array_static.e 
-
-nobugs: add_array_nobugs.e 
+square_root: square_root.e 
 
 %_c.o: %.c
 	$(CC) $(CFLAGS) -c $^ -o $@

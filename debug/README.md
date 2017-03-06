@@ -1,6 +1,6 @@
 # Debug
 
-En esta carpeta hay cuatro archivos Aquí hay cuatro carpetas, cada una
+En esta carpeta hay cinco carpetas, cada una
 con sus ejercicios. Las respuestas a los ejercicios tienen que estar
 en esta carpeta, bajo el nombre `respuestas.md`.
 

@@ -21,11 +21,13 @@
 void mat_Tmat_mul( float * A, float * C ){
 
   int i, j, k;
-  float temp[SIZE][SIZE];
+  //float temp[SIZE][SIZE];
+  temp = (float *) malloc(SIZE * SIZE * sizeof(float));
 
   for (i = 0; i < SIZE; i++)
     for (j = 0; j < SIZE; j++)
-      temp[j][i] = A[(i * SIZE) + j];
+      //temp[j][i] = A[(i * SIZE) + j];
+      temp[(i * SIZE) + j] = [(i * SIZE) + j];
 
   for (i = 0; i < SIZE; i++)
     for (j = 0; j < SIZE; j++)
@@ -57,4 +59,3 @@ int main(int argc, char * argv[]){
 
   return 0;
 }
-  
